@@ -1,0 +1,10 @@
+{% for post in posts %}
+{{ post.title }}
+<br>
+{{ post.text }}
+<br>
+<img src="{% url post.image%}">
+<br>
+{{ post.date_created }}
+<br>
+{% endfor %}
