@@ -18,3 +18,9 @@ def postlist(request):
     posts = Post.objects.all()
     context = {'posts': posts}
     return render(request, 'firstapp/post-template.html', context)
+
+def blogDetailView(request, blog_id):
+    blog = Blog.objects.get(id=blog_id)
+    posts = blog.post_set.all()
+    context = {'blog': blog, 'posts': posts}
+    return render(request, 'firstapp/blog-detail.html', context)

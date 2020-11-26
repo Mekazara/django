@@ -1,10 +1,13 @@
 {% for post in posts %}
+<img src="{{ post.image.url}}">
+<br>
 {{ post.title }}
 <br>
 {{ post.text }}
 <br>
-<img src="{% url post.image%}">
-<br>
 {{ post.date_created }}
 <br>
+<h1>{{ post.blog }}</h1>
+<br>
 {% endfor %}
+
